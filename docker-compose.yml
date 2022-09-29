@@ -14,7 +14,9 @@ services:
       - MYSQL_PASSWORD=pass
   node-app:
     build: .
-    image: node-app:1.0
+    image: simulator
+    volumes:
+      - ./opt:/app
     ports:
       - '9999:9999'
 
